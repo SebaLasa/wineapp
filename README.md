@@ -16,7 +16,7 @@ This is a simple web application that I would love to have available when I star
 
 After the git clone you should install all the dependencies using the npm command (Node Packaged Modules, this guy will download and install software for you):
 
-    git clone https://lasasebastian@bitbucket.org/lasasebastian/wineapp.git
+    git clone https://github.com/SebaLasa/wineapp.git
     cd wineapp
     npm install
 
