@@ -1,7 +1,7 @@
-sales-nodejs
+WineApp
 ============
 
-A sales app made in MongoDB + Express + AngularJS + Node.js
+A wine app made in MongoDB + Express + AngularJS + Node.js
 
 MEAN is a full-stack JavaScript platform designed for web applications. More info: http://en.wikipedia.org/wiki/MEAN
 
@@ -16,8 +16,8 @@ This is a simple web application that I would love to have available when I star
 
 After the git clone you should install all the dependencies using the npm command (Node Packaged Modules, this guy will download and install software for you):
 
-    git clone https://github.com/navarroaxel/sales-nodejs.git
-    cd sales-nodejs
+    git clone https://lasasebastian@bitbucket.org/lasasebastian/wineapp.git
+    cd wineapp
     npm install
 
 # IDE
