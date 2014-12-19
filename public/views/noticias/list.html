@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Noticias</h1>
+
+    <div class="headerList">
+        <div>Fecha</div>
+        <div>Titulo</div>
+        <div>Actions</div>
+    </div>
+    <div class="clear-fix itemList" ng-repeat="noticia in noticias" ng-class-odd="'odd'" ng-class-even="'even'">
+        <FONT SIZE=2><div>{{noticia.fecha}}</div></FONT>
+        <div>{{noticia.titulo}}</div>
+        <div><a ng-href="#/noticias/edit/{{noticia._id}}"><img src="/images/Edit-24.png" alt="Edit" title="Edit"></a>&nbsp;
+            <a ng-href="#/noticias/delete/{{noticia._id}}"><img src="/images/Bin-24.png" alt="Delete" title="Delete"></a></div>
+    </div>
+    </br>
+    </br>
+    <a class="button" ng-href="#/noticias/create">New <img src="/images/Add-24.png"></a>
+</div>

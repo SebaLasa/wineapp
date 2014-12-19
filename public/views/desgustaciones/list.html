@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Desgustaciones</h1>
+
+    <div class="headerList">
+        <div>Fecha</div>
+        <div>Hora</div>
+        <div>Vinoteca</div>
+        <div>Lugar</div>
+        <div>Actions</div>
+    </div>
+    <div class="clear-fix itemList" ng-repeat="desgustacion in desgustaciones"  ng-class-odd="'odd'">
+        
+        <FONT SIZE=2><div>{{desgustacion.fecha}}</div></FONT>
+        <div>{{desgustacion.hora}}</div>
+        <div>{{desgustacion.vinoteca}}</div>
+        <div>{{desgustacion.barrio}}</div>
+        <div>
+            <a ng-href="#/desgustaciones/edit/{{desgustacion._id}}"><img src="/images/Edit-24.png" alt="Edit" title="Edit"></a>&nbsp;
+            <a ng-href="#/desgustaciones/delete/{{desgustacion._id}}"><img src="/images/Bin-24.png" alt="Delete" title="Delete"></a>
+        </div>
+    </div>
+    </br>
+    </br>
+    <a class="button" ng-href="#/desgustaciones/create">New <img src="/images/Add-24.png"></a>
+</div>

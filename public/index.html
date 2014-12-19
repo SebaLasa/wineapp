@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Wine tour</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+<div ng-app="vinos">
+    <header>
+        <div class="tab">
+            <a ng-href="#/desgustaciones">Degustaciones</a>
+            <a ng-href="#/noticias">Noticias</a>
+        </div>
+    </header>
+    <section>
+        <div ng-controller="AlertDemoCtrl">
+            <alert ng-repeat="alert in alerts" type="alert.type">{{alert.message}}</alert>
+        </div>
+        <div ng-view></div>
+    </section>
+</div>
+<footer>
+    <div>
+        © 2014
+    </div>
+</footer>
+
+<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+
+<script src="jquery/dist/jquery.js"></script>
+<script src="bootstrap/dist/js/bootstrap.js"></script>
+<script src="jquery-ui/jquery-ui.js"></script>
+<script src="angular/angular.js"></script>
+<script src="angular-route/angular-route.js"></script>
+<script src="ng-file-upload/angular-file-upload.js"></script>
+<script src="angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js"></script>
+<script src="angular-ui-date/src/date.js"></script>
+<script src='d3/d3.min.js'></script>
+<script src='angular-charts/dist/angular-charts.min.js'></script>
+
+<script src="lodash/dist/lodash.compat.js"></script>
+<script src="angular-google-maps/dist/angular-google-maps.js"></script>
+
+
+
+<script src="/javascripts/ui-bootstrap-tpls-0.6.0.js"></script>
+<script src="/javascripts/services.js"></script>
+<script src="/javascripts/controllers.js"></script>
+<script src="/javascripts/filters.js"></script>
+<script src="/javascripts/directives.js"></script>
+
+<script src="/javascripts/app.js"></script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<div class="container">
+    <h1>Degustaciones</h1>
+    <div ng-switch="!!desgustacion._id">
+        <h2 ng-switch-when="true">Edit</h2>
+
+        <h2 ng-switch-when="false">New</h2>
+    </div>
+        <form ng-submit="save()">
+        <div class="row">
+            <div class="col-md-1 ">
+                <div class="input-group">
+                    <label for="vinoteca">Vinoteca</label>
+                    <input type="text" id="vinoteca" name="vinoteca" ng-model="desgustacion.vinoteca"  placeholder="Vinoteca" 
+                    required maxlength="80" class="form-control"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+            <div class="input-group">
+                <label for="direccion">Direccion</label>
+                <input type="text" name="direccion" ng-model="desgustacion.direccion" placeholder="Direccion" 
+                required maxlength="80" class="form-control"/>
+                <button type="button" ng-click="codeAddress()">Buscar</button>  
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="map_container" >
+                    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+                        <ui-gmap-marker coords="marker.coords" options="marker.options" idkey="1">
+                        </ui-gmap-marker>
+                    </ui-gmap-google-map>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <label for="barrio">Barrio</label>
+                    <input type="text" name="barrio" ng-model="desgustacion.barrio" placeholder="Barrio" required class="form-control"/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <label for="fecha">Fecha de la Desgustacion</label>
+                    <input type="date" id="fecha" name="fecha" ng-model="desgustacion.fecha" required class="form-control"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="input-group">
+                     <label for="hora">Hora de Inicio</label>
+                <input type="time" id="hora" name="hora" ng-model="desgustacion.hora" required class="form-control"/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <label for="telephone">Teléfono</label>
+                    <input type="text" name="telefono" ng-model="desgustacion.telefono" placeholder="Telefono" required maxlength="11"
+                           class="form-control"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <label for="bodegas">Bodegas</label>
+                    <input  type="text" name="bodegas" ng-model="desgustacion.bodegas" size="50" 
+                    placeholder="Bodegas" required class="form-control"/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <label for="precio">Precio</label>
+                    <input type="text" name="precio" ng-model="desgustacion.precio" placeholder="Precio" required class="form-control"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="descripcion">Descripcion</label>
+                     <textarea type="text" name="descripcion" ng-model="desgustacion.descripcion" cols="50" rows="5"
+                      placeholder="Descripcion" required 
+                     class="form-control"/>
+                </div>
+            </div>
+         </div>
+        <div class="row">   
+        <div class="section">
+            <div class="input-group">
+                <div class="control-group">
+                    <div class="controls">
+                        <span class="btn btn-default fileinput-button">
+                                <input type="file" ng-file-select="onFileSelect($files)" accept="image/*"/>
+                                <span ng-hide="desgustacion.file">&nbsp;Ningún archivo seleccionado.</span>
+                                <span ng-show="desgustacion.file">&nbsp;Seleccionado: {{desgustacion.file.name}}</span>
+                        </span>
+                            <img ng-src='/{{desgustacion.image}}' ng-show="desgustacion.image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <br/>
+        <div class="clear-fix">
+            <input type="submit" class="button" value="save"/>
+        </div>
+    </form>
+    <a ng-href="#/desgustaciones">back</a>
+</div>

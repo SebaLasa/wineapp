@@ -1,0 +1,20 @@
+<div class="container">
+	<h1>Desgustaciones</h1>
+	<h2>Delete</h2>
+	<div>
+		<b>Vinoteca</b>
+		<span>{{desgustacion.vinoteca}}</span>
+	</div>
+	<div>
+		<b>Fecha</b>
+		<span>{{desgustacion.fecha}}</span>
+	</div>
+	<div>
+		<b>Hora</b>
+		<span>{{desgustacion.hora}}</span>
+	</div>
+	<form ng-submit="delete()">
+		<input type="submit" class="button" value="delete"/>
+	</form>
+	<a href="#/desgustaciones">back</a>
+</div>

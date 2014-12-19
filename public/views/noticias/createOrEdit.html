@@ -1,0 +1,54 @@
+<div class="container">
+    <h1>Noticias</h1>
+
+    <div ng-switch="!!noticia._id">
+        <h2 ng-switch-when="true">Edit</h2>
+
+        <h2 ng-switch-when="false">New</h2>
+    </div>
+        <form ng-submit="save()">
+        <div class="row">
+            <div class="col-md-4 ">
+                <div class="input-group">
+                    <label for="titulo">Titulo</label>
+                    <input type="text" id="titulo" name="titulo" ng-model="noticia.titulo"  placeholder="Titulo" 
+                    required maxlength="80" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div classs="input-group">
+                    <label for="copete">Copete</label>
+                    <input type="text" name="copete" ng-model="noticia.copete" placeholder="Copete" size="40"
+                    required maxlength="80" class="form-control"/>
+                </div>
+            </div>
+         </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="cuerpo">Cuerpo</label>
+                     <textarea type="text" name="cuerpo" ng-model="noticia.cuerpo" cols="50" rows="5"
+                      placeholder="Cuerpo" required 
+                     class="form-control"/>
+                </div>
+            </div>
+        <div class="section">
+            <div class="input-group">
+                <div class="control-group">
+                    <div class="controls">
+                        <span class="btn btn-default fileinput-button">
+                                <input type="file" ng-file-select="onFileSelect($files)" accept="image/*"/>
+                                <span ng-hide="noticia.file">&nbsp;Ningún archivo seleccionado.</span>
+                                <span ng-show="noticia.file">&nbsp;Seleccionado: {{noticia.file.name}}</span>
+                        </span>
+                            <img ng-src='/{{noticia.image}}' ng-show="noticia.image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="clear-fix">
+            <input type="submit" class="button" value="save"/>
+        </div>
+    </form>
+    <a ng-href="#/noticias">back</a>
+</div>

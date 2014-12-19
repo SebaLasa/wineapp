@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Noticias</h1>
+
+    <h2>Delete</h2>
+
+    <div>
+        <b>Fecha</b>
+        <span>{{noticia.fecha}}</span>
+    </div>
+    <div>
+        <b>Titulo</b>
+        <span>{{noticia.titulo}}</span>
+    </div>
+    <div>
+        <b>Copete</b>
+        <span>$ {{noticia.copete}}</span>
+    </div>
+    <form ng-submit="delete()">
+        <input type="submit" class="button" value="delete"/>
+    </form>
+    <a href="#/noticias">back</a>
+</div>
